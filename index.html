@@ -18,10 +18,10 @@
   "@context": "https://schema.org",
   "@type": "JewelryStore",
   "name": "SK Gold Jewels Makers",
-  "telephone": "+919597021428",
+  "telephone": ["+919597021428", "+918825785872"],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Shop No.113, IDBI Officers Quarters, 17, Ramanathan St, Postal Colony, T. Nagar",
+    "streetAddress": "Shop No 113, 1st Floor, No 17, Rameshwaram Road, T. Nagar",
     "addressLocality": "Chennai",
     "addressRegion": "Tamil Nadu",
     "postalCode": "600017",
@@ -64,6 +64,7 @@
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__text">
+        <p class="badge"><b>25+</b> <span data-i18n="hero_badge"></span></p>
         <p class="eyebrow" data-i18n="hero_eyebrow"></p>
         <h1 data-i18n="hero_title"></h1>
         <p class="lead" data-i18n="hero_sub"></p>
@@ -73,13 +74,29 @@
           <a class="btn btn--ghost" href="tel:+919597021428" data-i18n="btn_call"></a>
         </div>
       </div>
-      <img class="hero__img" src="assets/images/hero.svg" alt="Gold jewellery by SK Gold Jewels Makers" width="1200" height="800">
+      <img class="hero__logo" src="assets/images/logo.png" alt="SK Gold Jewel Makers logo" width="244" height="244">
+    </div>
+  </section>
+
+  <section class="trust" aria-labelledby="trustTitle">
+    <div class="container">
+      <p class="trust__label" id="trustTitle" data-i18n="trust_label"></p>
+      <div class="trust__names">
+        <span class="trust__name">GRT Jewellers</span>
+        <span class="trust__dot" aria-hidden="true">◆</span>
+        <span class="trust__name">Kalyan Jewellers</span>
+      </div>
+      <p class="trust__note" data-i18n="trust_note"></p>
     </div>
   </section>
 
   <section class="section" id="about">
     <div class="container about">
-      <img src="assets/images/owner.svg" alt="Suresh Kumar, goldsmith" loading="lazy" width="800" height="800">
+      <div class="exp">
+        <strong>25+</strong>
+        <span data-i18n="exp_title"></span>
+        <small data-i18n="exp_sub"></small>
+      </div>
       <div>
         <h2 data-i18n="about_title"></h2>
         <p data-i18n="about_p1"></p>
@@ -104,6 +121,7 @@
         <article class="card"><span class="card__ico">⭕</span><h3 data-i18n="p_bangles"></h3></article>
         <article class="card"><span class="card__ico">📿</span><h3 data-i18n="p_necklaces"></h3></article>
         <article class="card"><span class="card__ico">🔱</span><h3 data-i18n="p_pendants"></h3></article>
+        <article class="card card--accent"><span class="card__ico">🔬</span><h3 data-i18n="p_laser"></h3><p class="card__sub" data-i18n="p_laser_d"></p></article>
         <article class="card card--accent"><span class="card__ico">🎨</span><h3 data-i18n="p_custom"></h3></article>
       </div>
     </div>
@@ -142,12 +160,12 @@
     <div class="container">
       <h2 data-i18n="gallery_title"></h2>
       <div class="grid grid--gallery">
-        <button type="button" class="thumb"><img src="assets/images/g1.svg" alt="Gold ring" loading="lazy" width="800" height="800"></button>
-        <button type="button" class="thumb"><img src="assets/images/g2.svg" alt="Gold chain" loading="lazy" width="800" height="800"></button>
-        <button type="button" class="thumb"><img src="assets/images/g3.svg" alt="Gold earrings" loading="lazy" width="800" height="800"></button>
-        <button type="button" class="thumb"><img src="assets/images/g4.svg" alt="Gold bangles" loading="lazy" width="800" height="800"></button>
-        <button type="button" class="thumb"><img src="assets/images/g5.svg" alt="Gold necklace" loading="lazy" width="800" height="800"></button>
-        <button type="button" class="thumb"><img src="assets/images/g6.svg" alt="Gold pendant" loading="lazy" width="800" height="800"></button>
+        <button type="button" class="thumb"><img src="assets/images/rings.jpg" alt="Gold rings set with blue sapphire, emerald and cat's eye stones" loading="lazy" width="800" height="800"><span data-i18n="gal_rings"></span></button>
+        <button type="button" class="thumb"><img src="assets/images/bangles.jpg" alt="Pair of machine-cut gold bangles" loading="lazy" width="800" height="800"><span data-i18n="gal_bangles"></span></button>
+        <button type="button" class="thumb"><img src="assets/images/murugan-ring.jpg" alt="Gold ring with enamel Lord Murugan design" loading="lazy" width="800" height="800"><span data-i18n="gal_murugan"></span></button>
+        <button type="button" class="thumb"><img src="assets/images/heart-pendant.jpg" alt="Custom heart locket pendant with initials and Tamil letter" loading="lazy" width="800" height="800"><span data-i18n="gal_heart"></span></button>
+        <button type="button" class="thumb"><img src="assets/images/ruby-necklace.jpg" alt="Gold necklace set with ruby stones" loading="lazy" width="800" height="800"><span data-i18n="gal_ruby"></span></button>
+        <button type="button" class="thumb"><img src="assets/images/bracelet.jpg" alt="Gold bracelet with a hook clasp" loading="lazy" width="800" height="800"><span data-i18n="gal_bracelet"></span></button>
       </div>
     </div>
   </section>
@@ -172,9 +190,9 @@
     <div class="container visit">
       <div>
         <h2 data-i18n="visit_title"></h2>
-        <p><strong data-i18n="visit_addr_l"></strong><br>Shop No.113, IDBI Officers Quarters,<br>17, Ramanathan St, Postal Colony,<br>T. Nagar, Chennai – 600017</p>
+        <p><strong data-i18n="visit_addr_l"></strong><br>Shop No 113, 1st Floor,<br>No 17, Rameshwaram Road,<br>T. Nagar, Chennai – 600017</p>
         <p><strong data-i18n="visit_hours_l"></strong><br><span data-i18n="visit_hours"></span></p>
-        <p><strong data-i18n="visit_phone_l"></strong><br><a class="link" href="tel:+919597021428">+91 95970 21428</a></p>
+        <p><strong data-i18n="visit_phone_l"></strong><br><a class="link" href="tel:+919597021428">+91 95970 21428</a><br><a class="link" href="tel:+918825785872">+91 88257 85872</a></p>
         <div class="btn-row">
           <a class="btn btn--wa" data-wa href="https://wa.me/919597021428" target="_blank" rel="noopener" data-i18n="btn_whatsapp"></a>
           <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=SK+Gold+Jewels+Makers+T+Nagar+Chennai" target="_blank" rel="noopener" data-i18n="btn_directions"></a>
