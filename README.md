@@ -21,3 +21,6 @@ Gallery photos are in `assets/images/` (`rings`, `bangles`, `murugan-ring`, `hea
 
 ## Deploy
 Netlify or GitHub Pages (publish the repo root).
+
+## Images
+`assets/images/logo.png` (hero, circular crop) and `owner.jpg` (About section) are the brand images. Originals are not kept in the repo.

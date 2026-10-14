@@ -76,10 +76,12 @@ p { margin: 0 0 1em; }
 .trust__note { max-width: 640px; margin: 10px auto 0; color: #6b5558; font-size: .95rem; }
 
 /* Experience panel */
-.exp { background: linear-gradient(160deg, var(--maroon), var(--maroon-d)); border: 2px solid var(--gold); border-radius: var(--radius); padding: 36px 20px; text-align: center; color: var(--ivory); display: flex; flex-direction: column; gap: 6px; }
-.exp strong { font-family: "Playfair Display", serif; font-size: clamp(4rem, 16vw, 6rem); line-height: 1; color: var(--gold-l); }
-.exp span { font-size: 1.2rem; font-weight: 600; color: var(--gold-l); }
-.exp small { font-size: .95rem; opacity: .9; }
+.exp { position: relative; margin: 0; overflow: hidden; border: 2px solid var(--gold); border-radius: var(--radius); background: var(--maroon-d); }
+.exp img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+.exp figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 56px 18px 18px; text-align: center; color: var(--ivory); display: flex; flex-direction: column; gap: 2px; background: linear-gradient(transparent, rgba(62,10,19,.92) 55%); }
+.exp strong { font-family: "Playfair Display", serif; font-size: clamp(3rem, 12vw, 4.5rem); line-height: 1; color: var(--gold-l); }
+.exp span { font-size: 1.15rem; font-weight: 600; color: var(--gold-l); }
+.exp small { font-size: .92rem; opacity: .92; }
 
 /* Buttons */
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
