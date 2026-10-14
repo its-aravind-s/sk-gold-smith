@@ -12,7 +12,7 @@ Open http://localhost:8000 (`?lang=ta` opens the Tamil version).
 All copy is in `js/i18n.js` (`en` and `ta` must have the same keys). Have a native Tamil speaker proofread the `ta` block.
 
 ## Photos
-Gallery photos are in `assets/images/` (`rings`, `bangles`, `murugan-ring`, `heart-pendant`, `ruby-necklace`, `bracelet`, all .jpg). To add one, put a ~1200px JPEG there and add a `<button class="thumb">` in `index.html` plus a caption key in `js/i18n.js`. Only use photos the owner owns.
+Gallery photos live in `assets/images/` (~1200px JPEGs). To add one: drop the file there, add a `<button class="thumb" data-cat="rings|necklaces|pendants|bangles">` in the gallery section of `index.html`, and add its caption key to both `en` and `ta` in `js/i18n.js`. The gallery shows the first 9 under "All" with a View more button. Only use photos the owner owns.
 
 ## Before launch
 - Once the domain is known, add `sitemap.xml` and canonical/OG URLs.

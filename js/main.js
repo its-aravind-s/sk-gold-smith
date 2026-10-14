@@ -28,6 +28,7 @@
     var d = document.querySelector('meta[name="description"]');
     if (d) d.setAttribute("content", META[lang].desc);
     save(lang);
+    if (typeof renderGallery === "function") renderGallery();
   }
 
   var params = new URLSearchParams(location.search);
@@ -52,6 +53,38 @@
       menuBtn.setAttribute("aria-expanded", "false");
     }
   });
+
+  // Gallery filter + view more
+  var LIMIT = 9;
+  var thumbs = Array.prototype.slice.call(document.querySelectorAll(".thumb"));
+  var chips = document.querySelectorAll(".chip");
+  var moreBtn = document.getElementById("moreBtn");
+  var filter = "all";
+  var expanded = false;
+  function renderGallery() {
+    if (!thumbs) return;
+    var n = 0;
+    thumbs.forEach(function (t) {
+      var match = filter === "all" || t.dataset.cat === filter;
+      var show = match && (filter !== "all" || expanded || n < LIMIT);
+      if (match) n++;
+      t.hidden = !show;
+    });
+    var total = filter === "all" ? thumbs.length : 0;
+    moreBtn.hidden = !(filter === "all" && total > LIMIT);
+    var dict = window.I18N[document.documentElement.lang] || window.I18N.en;
+    moreBtn.textContent = expanded ? dict.btn_less : dict.btn_more;
+  }
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      filter = c.dataset.filter;
+      expanded = false;
+      chips.forEach(function (x) { x.classList.toggle("is-active", x === c); });
+      renderGallery();
+    });
+  });
+  moreBtn.addEventListener("click", function () { expanded = !expanded; renderGallery(); });
+  renderGallery();
 
   // Lightbox
   var lb = document.getElementById("lightbox");
