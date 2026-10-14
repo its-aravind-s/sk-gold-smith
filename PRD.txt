@@ -1,0 +1,34 @@
+Consider you are a professinal website builder for a client requirements. 
+We need to build a website for Goldsmith shop in chennai.
+
+Shop name: SK Gold Jewels Makers
+
+
+
+Step1: Check the SK Gold Jewels Makers T-nagar shop details (https://share.google/iBJW9ah4Kav9SqULP)
+
+Step2: Read the review given for the shop
+
+Step 3: Owner shared details 
+"
+Owner Name: Suresh Kumar
+Experience: 25+ years
+
+He is the goldsmith for well known big jewellery shops in chennai like GRT Jewellers, Kalyan Jewellers, etc.
+
+He have machines for cutting and polishing of gold.
+
+he made all types of gold jewellery like rings, chains, earrings, etc. 
+
+And he can do all customized designs as per the customer's requirement.
+
+All jewellery are made in gold 22, 24, 24 karat according to the customer's requirement. 
+
+Providing Delivery Service for the jewellery in chennai and nearby areas. 
+
+Purity check certificate is provided for the jewellery.
+"
+
+Step4: The website should be compactable for mobile.
+
+Step5: We need to support both english and Tamil language
