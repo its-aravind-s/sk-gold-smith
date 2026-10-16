@@ -178,3 +178,57 @@ p { margin: 0 0 1em; }
 .btn--more { background: transparent; border-color: var(--maroon); color: var(--maroon); cursor: pointer; font: inherit; font-weight: 600; margin-top: 22px; }
 .btn--more[hidden] { display: none; }
 @media (min-width: 960px) { .filters { justify-content: center; flex-wrap: wrap; } }
+
+/* ===== GSAP version: motion additions ===== */
+.header { position: sticky; }
+.scroll-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-l)); transform-origin: 0 50%; transform: scaleX(0); }
+.hero__inner { position: relative; }
+.hero h1 .word { display: inline-block; margin-right: .25em; }
+.shimmer {
+  background: linear-gradient(100deg, var(--gold) 20%, #fff3c4 45%, var(--gold-l) 55%, var(--gold) 80%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+.shimmer-dark {
+  background: linear-gradient(100deg, var(--maroon) 30%, #b8860b 50%, var(--maroon) 70%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+@keyframes shimmer { from { background-position: 150% 0; } to { background-position: -100% 0; } }
+
+.logo-wrap { position: relative; width: min(80%, 380px); aspect-ratio: 1; justify-self: center; }
+.logo-wrap__ring { position: absolute; inset: -10px; border-radius: 50%; background: conic-gradient(from 0deg, var(--gold), transparent 30%, var(--gold-l) 55%, transparent 80%, var(--gold)); animation: spin 8s linear infinite; filter: blur(1px); opacity: .9; }
+.logo-wrap .hero__logo { position: relative; width: 100%; height: 100%; justify-self: auto; box-shadow: 0 12px 32px rgba(0,0,0,.45); border: 4px solid var(--maroon-d); }
+.sparkle { position: absolute; background: var(--gold-l); clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); opacity: 0; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.card.is-in, .tile.is-in { transition: transform .25s, box-shadow .25s; } /* enabled only after the GSAP reveal finishes */
+.card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(90,15,28,.18); }
+.tile:hover { transform: translateX(6px); }
+.thumb { display: block; }
+.thumb[hidden] { display: none; }
+.exp strong, .stats strong { font-variant-numeric: tabular-nums; }
+
+.wa-float { overflow: visible; }
+.wa-float__pulse { position: absolute; inset: 0; border-radius: 50%; background: var(--wa); opacity: .5; animation: pulse 2.2s ease-out infinite; z-index: -1; }
+@keyframes pulse { to { transform: scale(1.7); opacity: 0; } }
+
+.lightbox { flex-direction: column; }
+.lightbox img { max-height: 76vh; max-width: min(92vw, 900px); user-select: none; touch-action: pan-y; }
+.lightbox img.lb-in { animation: lbIn .3s ease-out; }
+@keyframes lbIn { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
+.lightbox__cap { margin: 10px 0 0; color: var(--gold-l); font-weight: 600; }
+.lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgba(201,165,76,.9); color: var(--maroon-d); font-size: 1.8rem; line-height: 1; cursor: pointer; z-index: 2; }
+.lightbox__nav--prev { left: 10px; }
+.lightbox__nav--next { right: 10px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer, .shimmer-dark, .logo-wrap__ring, .wa-float__pulse { animation: none; }
+}
+
+/* The spinning ring's rotated bounding box can poke past the viewport on phones */
+.hero { overflow: hidden; }
