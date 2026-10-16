@@ -70,9 +70,6 @@ p { margin: 0 0 1em; }
 /* Trust band */
 .trust { background: var(--ivory); border-bottom: 3px solid var(--gold); padding: 28px 0; text-align: center; }
 .trust__label { text-transform: uppercase; letter-spacing: .1em; font-size: .8rem; color: #6b5558; margin-bottom: 10px; }
-.trust__names { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 18px; }
-.trust__name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.4rem, 5.5vw, 2.1rem); color: var(--maroon); }
-.trust__dot { color: var(--gold); }
 .trust__note { max-width: 640px; margin: 10px auto 0; color: #6b5558; font-size: .95rem; }
 
 /* Experience panel */
@@ -233,9 +230,18 @@ p { margin: 0 0 1em; }
 /* The spinning ring's rotated bounding box can poke past the viewport on phones */
 .hero { overflow: hidden; }
 
-/* Trust band: the ◆ separator only makes sense when both names share a line */
-.trust__dot { display: none; }
-@media (min-width: 600px) { .trust__dot { display: inline; } }
 
 /* Hero logo is a <picture> (animated WebP, static PNG for reduced motion) */
 .logo-wrap picture { display: block; width: 100%; height: 100%; }
+
+/* Trust band: headline + fact badges (no third-party names) */
+.trust__headline { margin: 0 0 18px; font-size: clamp(1.4rem, 5.5vw, 2.1rem); }
+.trust__badges { list-style: none; margin: 0 auto; padding: 0; max-width: 900px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.trust__badges li { background: #fff; border: 1px solid var(--gold-l); border-radius: var(--radius); padding: 14px 8px; display: flex; flex-direction: column; gap: 2px; }
+.trust__badges strong { font-family: "Playfair Display", Georgia, serif; font-size: 1.35rem; line-height: 1.2; color: var(--maroon); font-variant-numeric: tabular-nums; }
+html[lang="ta"] .trust__badges strong { font-family: var(--font-head); font-size: 1.15rem; }
+.trust__badges span { font-size: .82rem; color: #6b5558; }
+@media (min-width: 800px) { .trust__badges { grid-template-columns: repeat(4, 1fr); } }
+
+/* Diamond sets: earrings stand sits on the left of the frame, so bias the 4:5 crop that way */
+.thumb[data-cat="diamond"] img { object-position: 30% 50%; }

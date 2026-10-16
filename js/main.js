@@ -68,14 +68,13 @@
     var shown = [];
     thumbs.forEach(function (t) {
       var match = filter === "all" || t.dataset.cat === filter;
-      var show = match && (filter !== "all" || expanded || n < LIMIT);
+      var show = match && (expanded || n < LIMIT);
       if (match) n++;
       if (show && t.hidden) shown.push(t);
       t.hidden = !show;
     });
     if (animate && window.SKAnim) window.SKAnim.pop(shown);
-    var total = filter === "all" ? thumbs.length : 0;
-    moreBtn.hidden = !(filter === "all" && total > LIMIT);
+    moreBtn.hidden = n <= LIMIT;
     var dict = window.I18N[document.documentElement.lang] || window.I18N.en;
     moreBtn.textContent = expanded ? dict.btn_less : dict.btn_more;
   }

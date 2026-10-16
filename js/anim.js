@@ -67,7 +67,7 @@
   });
 
   // Scroll reveals (staggered per batch). Inline styles are cleared afterwards so CSS hover effects keep working.
-  var REVEAL = ".trust__label,.trust__name,.trust__note,.section h2,.section .sub,.about p,.stats li,.card,.tile,.steps li,.review,.filters,.grid--gallery .thumb,.visit > div > *,.map,#gallery .center,#reviews .center";
+  var REVEAL = ".trust__label,.trust__headline,.trust__badges li,.trust__note,.section h2,.section .sub,.about p,.stats li,.card,.tile,.steps li,.review,.filters,.grid--gallery .thumb,.visit > div > *,.map,#gallery .center,#reviews .center";
   var targets = Array.from(new Set(all(REVEAL)));
   gsap.set(targets, { opacity: 0, y: 28 });
   ScrollTrigger.batch(targets, {

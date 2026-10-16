@@ -85,11 +85,13 @@
   <section class="trust" aria-labelledby="trustTitle">
     <div class="container">
       <p class="trust__label" id="trustTitle" data-i18n="trust_label"></p>
-      <div class="trust__names">
-        <span class="trust__name shimmer-dark">Malabar Gold &amp; Diamonds</span>
-        <span class="trust__dot" aria-hidden="true">◆</span>
-        <span class="trust__name shimmer-dark" data-i18n="trust_more"></span>
-      </div>
+      <h2 class="trust__headline shimmer-dark" data-i18n="trust_headline"></h2>
+      <ul class="trust__badges">
+        <li><strong data-count="25" data-suffix="+">25+</strong><span data-i18n="tb_years"></span></li>
+        <li><strong data-count="5" data-decimals="1" data-suffix="★">5.0★</strong><span data-i18n="tb_rating"></span></li>
+        <li><strong data-i18n="tb_cert_t"></strong><span data-i18n="tb_cert_d"></span></li>
+        <li><strong data-i18n="tb_open_t"></strong><span data-i18n="tb_open_d"></span></li>
+      </ul>
       <p class="trust__note" data-i18n="trust_note"></p>
     </div>
   </section>
@@ -172,14 +174,18 @@
         <button type="button" class="chip" data-filter="necklaces" data-i18n="f_necklaces"></button>
         <button type="button" class="chip" data-filter="pendants" data-i18n="f_pendants"></button>
         <button type="button" class="chip" data-filter="bangles" data-i18n="f_bangles"></button>
+        <button type="button" class="chip" data-filter="diamond" data-i18n="f_diamond"></button>
       </div>
       <div class="grid grid--gallery">
         <button type="button" class="thumb" data-cat="necklaces"><img src="assets/images/necklace-peacock-temple.jpg" alt="Gold temple necklace with peacocks and Lakshmi pendant" loading="lazy" width="800" height="800"><span data-i18n="g_temple"></span></button>
         <button type="button" class="thumb" data-cat="necklaces"><img src="assets/images/necklace-kante-lakshmi.jpg" alt="Antique-finish gold necklace with Lakshmi pendant" loading="lazy" width="800" height="800"><span data-i18n="g_antique"></span></button>
         <button type="button" class="thumb" data-cat="pendants"><img src="assets/images/set-flower-b.jpg" alt="Gold flower pendant with matching earrings" loading="lazy" width="800" height="800"><span data-i18n="g_flower"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-15.jpg" alt="Long diamond haram with coloured stones and pearl drops" loading="lazy" width="800" height="800"><span data-i18n="d_long"></span></button>
         <button type="button" class="thumb" data-cat="rings"><img src="assets/images/ring-green-stone.jpg" alt="Gold ring with green stone and white stones" loading="lazy" width="800" height="800"><span data-i18n="g_green"></span></button>
         <button type="button" class="thumb" data-cat="rings"><img src="assets/images/rings.jpg" alt="Gold rings set with blue, green and orange stones" loading="lazy" width="800" height="800"><span data-i18n="gal_rings"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-01.jpg" alt="Diamond leaf-design necklace with matching earrings and green drop" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
         <button type="button" class="thumb" data-cat="rings"><img src="assets/images/ring-navaratna-tortoise.jpg" alt="Gold tortoise ring set with navaratna stones" loading="lazy" width="800" height="800"><span data-i18n="g_tortoise"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-11.jpg" alt="Victorian-style diamond choker with purple stones and ear cuffs" loading="lazy" width="800" height="800"><span data-i18n="d_victorian"></span></button>
         <button type="button" class="thumb" data-cat="pendants"><img src="assets/images/set-flower-a.jpg" alt="Gold flower pendant with matching earrings" loading="lazy" width="800" height="800"><span data-i18n="g_flower"></span></button>
         <button type="button" class="thumb" data-cat="pendants"><img src="assets/images/mangalsutra-peacock.jpg" alt="Gold peacock pendant with stones" loading="lazy" width="800" height="800"><span data-i18n="g_peacock"></span></button>
         <button type="button" class="thumb" data-cat="rings"><img src="assets/images/ring-red-stone.jpg" alt="Gold ring with a red stone" loading="lazy" width="800" height="800"><span data-i18n="g_red_ring"></span></button>
@@ -193,6 +199,31 @@
         <button type="button" class="thumb" data-cat="pendants"><img src="assets/images/earrings-workbench.jpg" alt="Gold earrings in the making on the workbench" loading="lazy" width="800" height="800"><span data-i18n="g_workbench"></span></button>
         <button type="button" class="thumb" data-cat="bangles"><img src="assets/images/bangles.jpg" alt="Pair of machine-cut gold bangles" loading="lazy" width="800" height="800"><span data-i18n="gal_bangles"></span></button>
         <button type="button" class="thumb" data-cat="bangles"><img src="assets/images/bracelet.jpg" alt="Gold bracelet with a hook clasp" loading="lazy" width="800" height="800"><span data-i18n="gal_bracelet"></span></button>
+        <button type="button" class="thumb" data-cat="pendants"><img src="assets/images/earrings-heart-hanging.jpg" alt="Gold heart-shaped hanging earrings" loading="lazy" width="800" height="800"><span data-i18n="g_heart_ear"></span></button>
+        <button type="button" class="thumb" data-cat="bangles"><img src="assets/images/bangles-pair-stand.jpg" alt="Pair of gold bangles on a display stand" loading="lazy" width="800" height="800"><span data-i18n="gal_bangles"></span></button>
+        <button type="button" class="thumb" data-cat="necklaces"><img src="assets/images/antique-haram-1.jpg" alt="Antique-finish Lakshmi haram set with stones and green beads" loading="lazy" width="800" height="800"><span data-i18n="g_haram"></span></button>
+        <button type="button" class="thumb" data-cat="necklaces"><img src="assets/images/antique-haram-2.jpg" alt="Antique-finish Lakshmi haram set with ruby-colour stones" loading="lazy" width="800" height="800"><span data-i18n="g_haram"></span></button>
+        <button type="button" class="thumb" data-cat="necklaces"><img src="assets/images/antique-haram-3.jpg" alt="Antique-finish Lakshmi haram set with pearls and green beads" loading="lazy" width="800" height="800"><span data-i18n="g_haram"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-02.jpg" alt="Diamond long necklace with pearl tassel pendant and matching studs" loading="lazy" width="800" height="800"><span data-i18n="d_long"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-03.jpg" alt="Diamond double-line necklace set with matching earrings" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-04.jpg" alt="Diamond necklace set with green stones and matching earrings" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-05.jpg" alt="Diamond double-line necklace with triangle green stone" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-06.jpg" alt="Diamond choker set with red and green stones" loading="lazy" width="800" height="800"><span data-i18n="d_choker"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-07.jpg" alt="Diamond short necklace set with matching earrings" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-08.jpg" alt="Diamond necklace set with square-cut green stones" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-09.jpg" alt="Long necklace with green stones and a diamond centre piece" loading="lazy" width="800" height="800"><span data-i18n="d_long"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-10.jpg" alt="Green stone and diamond necklace with matching earrings" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-12.jpg" alt="Diamond choker with pearl strands and green stones" loading="lazy" width="800" height="800"><span data-i18n="d_choker"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-13.jpg" alt="Diamond choker with blue bead strands and green centre stone" loading="lazy" width="800" height="800"><span data-i18n="d_choker"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-14.jpg" alt="Diamond choker with green beads and matching earrings" loading="lazy" width="800" height="800"><span data-i18n="d_choker"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-16.jpg" alt="Diamond floral choker with pearl strands and matching earrings" loading="lazy" width="800" height="800"><span data-i18n="d_choker"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-17.jpg" alt="Diamond necklace with green drop pendant and maang tikka" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-18.jpg" alt="Diamond necklace with green stone drop and matching top piece" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-19.jpg" alt="Diamond V-shaped necklace set with matching pendant" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-20.jpg" alt="Diamond choker with blue stone centre piece" loading="lazy" width="800" height="800"><span data-i18n="d_choker"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-21.jpg" alt="Diamond triangle-design necklace set" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-22.jpg" alt="Diamond necklace with green stone leaves and matching earrings" loading="lazy" width="800" height="800"><span data-i18n="d_set"></span></button>
+        <button type="button" class="thumb" data-cat="diamond"><img src="assets/images/diamond-23.jpg" alt="Long diamond necklace with pearl and green stone pendant and earrings" loading="lazy" width="800" height="800"><span data-i18n="d_long"></span></button>
       </div>
       <p class="center"><button type="button" class="btn btn--more" id="moreBtn" data-i18n="btn_more"></button></p>
     </div>
