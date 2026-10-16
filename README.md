@@ -26,4 +26,4 @@ Gallery photos live in `assets/images/` (~1200px JPEGs). To add one: drop the fi
 Netlify or GitHub Pages (publish the repo root).
 
 ## Images
-`assets/images/logo.png` (hero, circular crop) and `owner.jpg` (About section) are the brand images. Originals are not kept in the repo.
+`assets/images/logo-animated.webp` (hero: the spear sweeps across the line, then pauses ~2.5s; shown unless the visitor prefers reduced motion) and `logo.png` (its still fallback) and `owner.jpg` (About section) are the brand images. Originals are not kept in the repo.
